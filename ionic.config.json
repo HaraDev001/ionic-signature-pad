@@ -1,0 +1,7 @@
+{
+  "name": "ionic-signature-pad",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

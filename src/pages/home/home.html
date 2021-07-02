@@ -1,0 +1,27 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>
+            Ionic Signature
+        </ion-title>
+    </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <div class="title">Please draw your Signature</div>
+    <ion-row [ngClass]="{'drawing-active': isDrawing}">
+        <ion-col></ion-col>
+        <ion-col>
+            <signature-pad [options]="signaturePadOptions" (onBeginEvent)="drawStart()" (onEndEvent)="drawComplete()"></signature-pad>
+        </ion-col>
+        <ion-col></ion-col>
+    </ion-row>
+    <button ion-button full color="danger" (click)="clearPad()">Clear</button>
+    <button ion-button full color="secondary" (click)="savePad()">Save</button>
+    <ion-row>
+        <ion-col></ion-col>
+        <ion-col width-80>
+            <img [src]="signature" alt="">
+        </ion-col>
+        <ion-col></ion-col>
+    </ion-row>
+</ion-content>
